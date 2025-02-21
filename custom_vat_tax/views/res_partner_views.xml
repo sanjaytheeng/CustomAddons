@@ -1,0 +1,16 @@
+<odoo>
+    <data>
+        <record id="view_partner_form_vendor" model="ir.ui.view">
+            <field name="name">res.partner.form.vendor</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='vat']" position="after">
+                    <field name="x_use_vat" string="Use VAT ID?" help="Check to use VAT ID, uncheck to use PAN ID"/>
+                    <field name="x_vat_id" string="VAT ID" attrs="{'invisible': [('x_use_vat', '=', False)], 'required': [('x_use_vat', '=', True)]}"/>
+                    <field name="x_pan_id" string="PAN ID" attrs="{'invisible': [('x_use_vat', '=', True)], 'required': [('x_use_vat', '=', False)]}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
