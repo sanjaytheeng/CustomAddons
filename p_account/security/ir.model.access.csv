@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_placement_transaction_type_user,access.placement.transaction.type.user,model_placement_transaction_type,base.group_user,1,0,0,0
+access_placement_transaction_type_manager,access.placement.transaction.type.manager,model_placement_transaction_type,base.group_system,1,1,1,1
+access_account_payment_inherit_user,access.account.payment.inherit.user,account.model_account_payment,base.group_user,1,0,0,0
+access_account_payment_inherit_manager,access.account.payment.inherit.manager,account.model_account_payment,base.group_system,1,1,1,1

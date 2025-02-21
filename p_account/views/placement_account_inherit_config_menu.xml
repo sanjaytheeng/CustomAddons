@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Tree View -->
+    <record id="view_placement_transaction_type_tree" model="ir.ui.view">
+        <field name="name">placement.transaction.type.tree</field>
+        <field name="model">placement.transaction.type</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="view_placement_transaction_type_form" model="ir.ui.view">
+        <field name="name">placement.transaction.type.form</field>
+        <field name="model">placement.transaction.type</field>
+        <field name="arch" type="xml">
+            <form string="Transaction Type">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_placement_transaction_type" model="ir.actions.act_window">
+        <field name="name">Transaction Types</field>
+        <field name="res_model">placement.transaction.type</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Menu Item under Accounting Configuration -->
+    <menuitem id="menu_placement_transaction" name="Transaction" parent="account.menu_finance_configuration"/>
+    <menuitem id="menu_placement_transaction_type"
+              name="Transaction Types"
+              parent="menu_placement_transaction"
+              action="action_placement_transaction_type"/>
+</odoo>
