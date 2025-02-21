@@ -1,7 +1,7 @@
 <odoo>
   <data>
     <record id="placement_account_form_inherit" model="ir.ui.view">
-        <field name="name">account.psyment.form.inherit</field>
+        <field name="name">account.payment.form.inherit</field>
         <field name="model">account.payment</field>
         <field name="inherit_id" ref="account.view_account_payment_form"/>
         <field name="arch" type="xml">
@@ -32,6 +32,7 @@
             </xpath>
         </field>
     </record>
+
 
   </data>
 </odoo>
